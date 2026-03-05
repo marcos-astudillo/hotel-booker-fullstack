@@ -1,3 +1,4 @@
+
 # Hotel Booker – Fullstack App (Django + Angular)
 
 ![Django](https://img.shields.io/badge/Django-5.2-green?logo=django)
@@ -6,21 +7,41 @@
 ![Railway](https://img.shields.io/badge/Backend-Railway-black?logo=railway)
 ![JWT](https://img.shields.io/badge/Auth-JWT-orange?logo=jsonwebtokens)
 
+A full-stack hotel reservation management system built with **Django REST API** and **Angular**.  
+The application allows users to authenticate securely and manage hotel reservations with full CRUD functionality.
 
-A full-stack hotel reservation management system built with Django (REST API) and Angular.  
-This project includes secure login, full CRUD for reservations, responsive UI with Bootstrap, and deployment on Firebase (frontend) and PythonAnywhere (backend).
+The project is deployed with:
+
+- **Frontend:** Render
+- **Backend API:** Railway
+- **Database:** PostgreSQL (Railway)
 
 ---
 
 ## ✨ Features
 
-- 🔐 JWT-based login authentication
+- 🔐 JWT-based authentication
 - 📋 Create, view, update, and delete reservations
-- 📧 Fields: guest name, email, phone, room number, check-in & check-out
-- 🔎 Search reservations by name, room, phone or email
+- 📧 Reservation fields: guest name, email, phone, room number, check-in & check-out
+- 🔎 Search reservations by name, room number, phone or email
 - ⚙️ Protected routes using Angular guards
-- 📱 Responsive Bootstrap interface
-- 🌍 Deployed on Render (Frontend) & railway (API)
+- 📱 Responsive Bootstrap UI
+- 🌍 Full cloud deployment (Render + Railway)
+- 🧪 Automatic database migrations during deploy
+- 👤 Demo user automatically created during deployment
+
+---
+
+## 🔑 Demo Credentials
+
+You can test the application using the following account:
+
+```
+username: demo
+password: demo123
+```
+
+The demo user is automatically created during deployment if it does not exist.
 
 ---
 
@@ -42,55 +63,107 @@ This project includes secure login, full CRUD for reservations, responsive UI wi
 
 ## ⚙️ Tech Stack
 
-**Frontend**  
-- Angular 17  
-- Bootstrap 5  
-- Angular Standalone Components  
-- Firebase Hosting
+### Frontend
 
-**Backend**  
-- Django 5  
-- Django REST Framework  
-- JWT Authentication  
-- PythonAnywhere
+- Angular 17
+- Bootstrap 5
+- Angular Standalone Components
+- Render Deployment
+
+### Backend
+
+- Django 5
+- Django REST Framework
+- JWT Authentication
+- PostgreSQL
+- Railway Deployment
 
 ---
 
-## 🚀 Local Setup
+## 🏗️ Architecture
+
+Frontend (Angular)
+⬇
+REST API (Django + DRF)
+⬇
+PostgreSQL Database (Railway)
+
+The backend handles authentication, business logic, and database operations while Angular provides a modern SPA interface.
+
+---
+
+## 🚀 Live Demo
+
+🔗 Frontend:  
+https://hotel-booker-fullstack.onrender.com/
+
+🔗 Backend API:  
+https://hotel-booker-backend-production.up.railway.app/api
+
+---
+
+## 💻 Local Setup
+
+### Backend
 
 ```bash
-# Backend
 cd api
 python -m venv env
-env\Scripts\activate
+env\Scripts\activate   # Windows
 pip install -r requirements.txt
+python manage.py migrate
 python manage.py runserver
+```
 
-# Frontend
+### Frontend
+
+```bash
 cd webapp
 npm install
 ng serve
 ```
 
-📡 Live Demo
+Frontend will run on:
 
-<!--🚧 Demo temporarily disabled while updating deployment.-->
+```
+http://localhost:4200
+```
 
-🔗 Frontend: https://hotel-booker-fullstack.onrender.com/
+Backend API will run on:
 
-🔗 Backend: https://hotel-booker-backend-production.up.railway.app/api
+```
+http://127.0.0.1:8000
+```
 
-## 👨‍💻 About Me
+---
 
-**Marcos Astudillo**  
-Full Stack Developer | Python · Django · Angular · Railway · Render
+## 🧠 Deployment Notes
+
+- Database migrations run automatically during Railway deploy.
+- Static files are collected automatically.
+- A demo user is created if it does not already exist.
+- Environment variables are managed through Railway service variables.
 
 ---
 
 ## 📫 Connect With Me
 
-[![🌍 Portfolio](https://img.shields.io/badge/Website-marcosastudillo.com-blueviolet?style=for-the-badge&logo=google-chrome)](https://www.marcosastudillo.com)
-[![💼 LinkedIn](https://img.shields.io/badge/LinkedIn-Marcos%20Astudillo-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/marcos-astudillo-c/)
-[![🐱 GitHub](https://img.shields.io/badge/GitHub-Marcos%20Astudillo-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/marcos-astudillo)
+<p align="center">
 
-**Email:** m.astudillo1986@gmail.com
+  <a href="https://www.marcosastudillo.com">
+    <img src="https://img.shields.io/badge/Website-marcosastudillo.com-blueviolet?style=for-the-badge&logo=google-chrome" />
+  </a>
+
+  <a href="https://www.linkedin.com/in/marcos-astudillo-c/">
+    <img src="https://img.shields.io/badge/LinkedIn-Marcos%20Astudillo-blue?style=for-the-badge&logo=linkedin" />
+  </a>
+
+  <a href="https://github.com/marcos-astudillo">
+    <img src="https://img.shields.io/badge/GitHub-Marcos%20Astudillo-181717?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+
+  <a href="mailto:m.astudillo1986@gmail.com">
+    <img src="https://img.shields.io/badge/Email-m.astudillo1986%40gmail.com-red?style=for-the-badge&logo=gmail" />
+  </a>
+
+</p>
