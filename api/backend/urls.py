@@ -30,6 +30,14 @@ def run_migrations(request):
     except Exception as e:
         return JsonResponse({"error": str(e)}, status=500)
 
+@csrf_exempt
+def collect_static(request):
+    try:
+        call_command('collectstatic', '--noinput')
+        return JsonResponse({"status": "Static files collected"})
+    except Exception as e:
+        return JsonResponse({"error": str(e)}, status=500)
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('reservations.urls')),
